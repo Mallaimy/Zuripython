@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid html</title>
+
+    <style>
+        
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        body{
+            display: flex;
+            place-items:center;
+            min-height: 100vh; 
+            background-color: rgb(6, 6, 73);      
+        }
+
+       .grid{
+            display: grid;
+            grid-template-areas: 
+            'a a b'
+            'c d d'
+            'c e e';
+            gap: 10px;
+
+            width: 50%;
+            margin: auto;
+        }
+        .grid div{
+            padding: 2em; 
+            border-radius: 5px;
+            height: 100px;  
+        }
+
+        .grid .bottom-bar-left{
+            height: 275px;  
+        }
+
+        .top-bar {
+            background-color: brown;
+            grid-area: a;
+        }
+
+        .top-bar-right {
+            background-color: rgb(250, 146, 61);
+            grid-area: b;
+        }
+
+        .bottom-bar-left{
+            background-color: green;
+            grid-area: c;
+        }
+        .bottom-bar-right-top{
+            background-color: rgb(0, 204, 255);
+            grid-area: d;
+        }
+        .bottom-bar-right-bottom{
+            background-color: rgb(0, 204, 255);
+            grid-area: e;
+        }
+
+
+    </style>
+
+
+</head>
+
+<body>
+    <main class="grid">
+        <div class="top-bar"> </div>
+        <div class="top-bar-right"></div>
+        <div class="bottom-bar-left"> </div>
+        <div class="bottom-bar-right-top"></div>
+        <div class="bottom-bar-right-bottom"></div>
+    </main>
+</body>
+
+</html>
